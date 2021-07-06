@@ -1,0 +1,2 @@
+Java
+Idea of MulticastSocket and its functioning.
