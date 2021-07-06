@@ -1,4 +1,4 @@
-# Group Chat using MulticastSocket
+# Group Chat (MulticastSocket)
 
 
 ###  Program Description
