@@ -14,7 +14,7 @@ Run the program using two command line arguments:
  * Start typing messages: *Before sending messages, open all terminals; otherwise, messages sent before beginning the terminal would be lost (since there is no facility of buffer incorporated to store the messages.)*
  * Type exit to close the socket.
 
-## Image Preview:
+## Command Line Preview:
 ![projh](https://user-images.githubusercontent.com/75936063/124558014-c98e4f80-de57-11eb-9200-daef897541e1.PNG)
 
 # References:
