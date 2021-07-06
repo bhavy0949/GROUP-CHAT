@@ -1,8 +1,8 @@
-# Image Steganography Using Python
+# Group Chat using MulticastSocket
 
 
-###  What is Image Steganography ?
-Image Steganography is the practice of concealing a message within another file/image.
+###  Program Description
+It's a chat application using MulticastSocket to enable users to chat with each others saving their time by having a basic UI.
 
 ### Basic Input taken
 (Use 1 for encode and 2 for decode)
@@ -18,10 +18,13 @@ Image Steganography is the practice of concealing a message within another file/
  * Bennett University
  
 
-# Reference
+# References:
 * https://www.edureka.co/blog/steganography-tutorial
-* https://www.ukessays.com/essays/computer-science/steganography-uses-methods-tools-3250.php
-* https://www.youtube.com/watch?v=xepNoHgNj0w&ab_channel=edureka%21
+* https://www.javastring.net/java/string/java-string-constructors
+![image](https://user-images.githubusercontent.com/75936063/124553620-939a9c80-de52-11eb-8359-d22ce3e1741f.png)
+
+* https://docs.oracle.com/javase/7/docs/api/java/net/MulticastSocket.html
+
 
 # Documentation Help
 * https://www.divine-data.com
