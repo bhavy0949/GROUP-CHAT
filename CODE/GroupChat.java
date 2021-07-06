@@ -1,10 +1,7 @@
 package com.company;
-
-
 import java.net.*;
 import java.io.*;
 import java.util.*;
-
 public class GroupChat
 {
     private static final String TERMINATE = "Exit";
@@ -24,19 +21,10 @@ public class GroupChat
                 System.out.print("Enter your name: ");
                 name = sc.nextLine();
                 MulticastSocket socket = new MulticastSocket(port);
-
-                // Since we are deploying
                 socket.setTimeToLive(0);
-                //this on localhost only (For a subnet set it as 1)
-
                 socket.joinGroup(group);
-                Thread t = new Thread(new
-                        ReadThread(socket,group,port));
-
-                // Spawn a thread for reading messages
+                Thread t = new Thread(new ReadThread(socket,group,port));
                 t.start();
-
-                // sent to the current group
                 System.out.println("Start typing messages...\n");
                 while(true)
                 {
@@ -51,8 +39,7 @@ public class GroupChat
                     }
                     message = name + ": " + message;
                     byte[] buffer = message.getBytes();
-                    DatagramPacket datagram = new
-                            DatagramPacket(buffer,buffer.length,group,port);
+                    DatagramPacket datagram = new DatagramPacket(buffer,buffer.length,group,port);
                     socket.send(datagram);
                 }
             }
@@ -65,10 +52,7 @@ public class GroupChat
             {
                 System.out.println("Error reading/writing from/to socket");
                 ie.printStackTrace();
-            }
-        }
-    }
-}
+            }}}}
 class ReadThread implements Runnable
 {
     private MulticastSocket socket;
@@ -81,29 +65,22 @@ class ReadThread implements Runnable
         this.group = group;
         this.port = port;
     }
-
     @Override
     public void run()
     {
         while(!GroupChat.finished)
         {
             byte[] buffer = new byte[ReadThread.MAX_LEN];
-            DatagramPacket datagram = new
-                    DatagramPacket(buffer,buffer.length,group,port);
+            DatagramPacket datagram = new DatagramPacket(buffer,buffer.length,group,port);
             String message;
             try
             {
                 socket.receive(datagram);
-                message = new
-                        String(buffer,0,datagram.getLength(),"UTF-8");
+                message = new String(buffer,0,datagram.getLength(),"UTF-8");
                 if(!message.startsWith(GroupChat.name))
                     System.out.println(message);
             }
             catch(IOException e)
             {
                 System.out.println("Socket closed!");
-            }
-        }
-    }
-}
-
+            }]}}
