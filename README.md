@@ -2,31 +2,26 @@
 
 
 ###  Program Description
-It's a chat application using MulticastSocket to enable users to chat with each others saving their time by having a basic UI.
+It's a chat application that uses MulticastSocket to allow users to speak with one another while saving time with a simple UI.
+A MulticastSocket is a (UDP) DatagramSocket with the ability to connect to "groups" of other multicast hosts on the internet.
 
 ### Basic Input taken
-(Use 1 for encode and 2 for decode)
-## Encode Preview:
- * 1
- * "C:\Users\xyz\Desktop\input.png" (input directory of image)
- * Bennett University (input data)
- * "C:\Users\xyz\Desktop\output.png" (input directory for output image)
+Run the program using two command line arguments:
+1. Class D IP address
+2. standard UDP port number.
+## Command Line Preview:
+ * Enter your name: (Your name)
+ * Start typing messages: *Before sending messages, open all terminals; otherwise, messages sent before beginning the terminal would be lost (since there is no facility of buffer incorporated to store the messages.)*
+ * Type exit to close the socket.
 
-## Decode Preview:
- * 2
- * 'C:\Users\xyz\Desktop\output.png' (input directory)
- * Bennett University
- 
+## Image Preview:
+![projh](https://user-images.githubusercontent.com/75936063/124558014-c98e4f80-de57-11eb-9200-daef897541e1.PNG)
 
 # References:
-* https://www.edureka.co/blog/steganography-tutorial
+* https://www.geeksforgeeks.org/socket-programming-in-java/
 * https://www.javastring.net/java/string/java-string-constructors
-![image](https://user-images.githubusercontent.com/75936063/124553620-939a9c80-de52-11eb-8359-d22ce3e1741f.png)
-
 * https://docs.oracle.com/javase/7/docs/api/java/net/MulticastSocket.html
 
 
 # Documentation Help
 * https://www.divine-data.com
-
-### Note: This software is best compatible with .png images.
